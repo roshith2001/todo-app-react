@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Raleway:wght@200;300;400&display=swap');
+
+:root {
+    --primary-color: #0E7A0E;
+    --white: #E7E7E7;
+    --ash: #A7A7A7;
+
+    --heading-font: 'Audiowide', cursive; 
+    --shadow: 0px 5px 3px var(--ash);
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.App{
+    width: 100vw;
+    height: 100vh;
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.box-style{
+    width: 60%;
+    color: var(--white);
+    text-align: center;
+    border-radius: 20px;
+    margin: 5px 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.heading-banner{
+    background: var(--primary-color);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button-holder{
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.button-holder button{
+    width: 100%;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    color: var(--primary-color);
+    font-size: 24px;
+    transition: 0.3s ease;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-holder button:hover{
+    background: var(--primary-color);
+    color: var(--white);
+    box-shadow: var(--shadow);
+}
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 2px solid #0E7A0E;
+}
+.main-container form{
+    width: 100%;
+    padding: 10px;
+}
+.question-holder{
+    width: 100% !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.question-holder label{
+    font-size: 18px;
+}
+.question-holder input{
+    font-size: 16px;
+    outline: none;
+    border: 1px solid var(--primary-color);
+    border-radius: 20px;
+    padding: 5px;
+    width: 60%;
+}
+.question-holder input:focus{
+    outline: 1px solid var(--primary-color);
+}
+.submit-button{
+    width: 40%;
+    color: var(--primary-color);
+    font-size: 24px;
+    outline: none;
+    border: 2px solid var(--primary-color);
+    transition: 0.3s ease;
+}
+.submit-button:hover{
+    background: var(--primary-color);
+    color: var(--white);
+}
+.one-todo-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid var(--ash);
+    border-radius: 20px;
+}
+.whole-todo{
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+}
+.clickable{
+    cursor: pointer;
 }
